@@ -8,8 +8,8 @@ app.set('views', path.join(__dirname, 'templates/jade'));
 app.set('view engine', 'jade');
 
 //setup stylus middleware
-app.use(require('stylus').middleware({src: path.join(__dirname, 'templates/stylus')
-	, dest: path.join(__dirname, 'public/styles')}));
+app.use(require('stylus').middleware({src: __dirname + '/templates'
+	, dest: __dirname + '/public'}));
 
 //setup static file responses
 app.use(ex.static(path.join(__dirname, 'public')))
