@@ -1,6 +1,9 @@
 h1 {
   color: #f00;
 }
+body {
+  margin-top: 180px;
+}
 .well {
   background-color: #f00 !important;
 }
@@ -8,16 +11,18 @@ h1 {
   max-width: 100%;
 }
 .dad {
-  background-color: #f8f8f8;
+  background-color: #000;
   border: 5px dashed #ddd;
   width: 100%;
-  height: 150px;
   text-align: center;
   padding-top: 25px;
   margin: 10px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #fff;
 }
 .dragover {
-  border: 5px dashed #00f;
+  border: 5px dashed #008000;
 }
 body:active .dad {
   display: block;
@@ -28,8 +33,8 @@ span {
   left: 50%;
   position: absolute;
 }
-img-reponsive {
-  max-height: 200px;
+.img-responsive {
+  max-height: 100%;
 }
 imgContainer {
   width: 500px;
