@@ -18,4 +18,4 @@ app.get('/', function (req, res){
 	res.render('home', {"message": "HELLO WORLD!"});
 });
 
-app.listen(process.argv[2] || 53130 );
+app.listen(process.env.PORT || 53130 );
