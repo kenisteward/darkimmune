@@ -1,0 +1,144 @@
+[
+	{
+		"question": "In JavaScript, you need to specify the value when you declare them.",
+		"answers": {
+			"t": true,
+			"f": false
+		},
+		"questionType": "tf"
+	},
+	{
+		"question": "localStorage is a property of what object?",
+		"answers": {
+			"a": "document",
+			"b": "string",
+			"c": "window",
+			"d": "session"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What notation may be used if you want to create a function as a template for creating objects?",
+		"answers": {
+			"a": "Constructor Notation",
+			"b": "Literal Notation",
+			"c": "Dot Notation",
+			"d": "None of the above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "Which of the following will return false?",
+		"answers": {
+			"a": "(false==0)",
+			"b": "(0=='')",
+			"c": "(undefined==null)",
+			"d": "None of the above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "Which JavaScript method returns only a single element node?",
+		"answers": {
+			"a": "getElementsByClassName",
+			"b": "getElementsByTagName",
+			"c": "querySelectorAll",
+			"d": "None of the above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "You use the text() method in jQuery in order to get what is stored in an input element.",
+		"answers": {
+			"t": true,
+			"f": false
+		},
+		"questionType": "tf"
+	},
+	{
+		"question": "Event bubbling is when the event starts at the least specific node and flows inward to the most specific element node.",
+		"answers": {
+			"t": true,
+			"f": false
+		},
+		"questionType": "tf"
+	},
+	{
+		"question": "For Event Delegation, where do you create the event listener to?",
+		"answers": {
+			"a": "The element",
+			"b": "The target",
+			"c": "The document object",
+			"d": "parent element"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What object do you call the preventDefault() method in order to change the default behavior of an element such as a button?",
+		"answers": {
+			"a": "event",
+			"b": "window",
+			"c": "document",
+			"d": "None of the above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What status message/code indicates that the response is Not Modified and most likely stored in cache?",
+		"answers": {
+			"a": "200",
+			"b": "404",
+			"c": "500",
+			"d": "None of the Above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What jQuery method is called when you use the shorthand notation: $(function(){});?",
+		"answers": {
+			"a": ".load()",
+			"b": ".on()",
+			"c": ".html()",
+			"d": "None of the above"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "Which jQuery object would I use in order to select all radio buttons on the page?",
+		"answers": {
+			"a": "$('input[type='radio']')",
+			"b": "$('radio')",
+			"c": "$('input[type='checked'])",
+			"d": "$('input:checked')"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What method can you use to perform a function or multiple statements on each of the items you have selected in jQuery?",
+		"answers": {
+			"a": "all()",
+			"b": "append()",
+			"c": "html()",
+			"d": "each()"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "What method would I use if I wanted to add a list item to the top of the list?",
+		"answers": {
+			"a": "append()",
+			"b": "prepend()",
+			"c": "before()",
+			"d": "after()"
+		},
+		"questionType": "mc"
+	},
+	{
+		"question": "It is best practice to use a for-in loop to iterate through Arrays",
+		"answers": {
+			"t": true,
+			"f": false
+		},
+		"questionType": "tf"
+	}
+]

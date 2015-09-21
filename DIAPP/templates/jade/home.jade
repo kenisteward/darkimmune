@@ -36,9 +36,9 @@ html(lang="en" ng-app="di")
         .col-md-6.col(ng-repeat="f in dataFiles")
           .well
               .row.vCenter
-                .col-md-6(style="height: 20vh;")
+                .col-md-6(style="height: 30vh;")
                    img.img-responsive.center-block(ng-src="{{f.data}}")
-                .col-md-6(style="height: 20vh;")
+                .col-md-6(style="height: auto;")
                   .panel(ng-class="{'panel-success': {{f.progress == 1}}, 'panel-warning': {{f.progress == 0}}, 'panel-danger': {{f.progress == undefined}}}")
                     .panel-heading
                       h3.panel-title {{f.name}}
