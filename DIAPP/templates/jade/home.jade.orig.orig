@@ -38,9 +38,15 @@ html(lang="en" ng-app="di")
               .row.vCenter
                 .col-md-6(style="height: 30vh;")
                    img.img-responsive.center-block(ng-src="{{f.data}}")
+<<<<<<< HEAD:DIAPP/templates/jade/home.jade.orig
+<<<<<<< HEAD
+                .col-md-6(style="height: 20vh;")
 =======
                 .col-md-6(style="height: auto;")
 >>>>>>> fixed pictures styles
+=======
+                .col-md-6(style="height: auto;")
+>>>>>>> f8cc97c0f7c64c95e4c88046d600a53c752c73d2:DIAPP/templates/jade/home.jade
                   .panel(ng-class="{'panel-success': {{f.progress == 1}}, 'panel-warning': {{f.progress == 0}}, 'panel-danger': {{f.progress == undefined}}}")
                     .panel-heading
                       h3.panel-title {{f.name}}
