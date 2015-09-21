@@ -40,11 +40,11 @@ html(lang="en" ng-app="di")
                    img.img-responsive.center-block(ng-src="{{f.data}}")
 <<<<<<< HEAD
 =======
-                .col-md-6(style="height: auto;")
+                .col-md-6(style="height: auto;" )
 >>>>>>> fixed pictures styles
 =======
                 .col-md-6(style="height: auto;" )
->>>>>>> test
+>>>>>>> 6647eba15b2514e40834d5a560822d840ce38b81
                   .panel(ng-class="{'panel-success': {{f.progress == 1}}, 'panel-warning': {{f.progress == 0}}, 'panel-danger': {{f.progress == undefined}}}")
                     .panel-heading
                       h3.panel-title {{f.name}}
