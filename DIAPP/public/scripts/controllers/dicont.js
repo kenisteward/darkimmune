@@ -25,7 +25,7 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 			g = pixels.data[i + 2];
 
 			if (r != 255 || b != 255 || g != 255) {
-				avg.push((r + b + g) / 3)
+				avg.push((r + b + g) / 3);
 			}
 		}
 
@@ -33,7 +33,7 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 			brightness += avg[k];
 		}
 
-		return brightness / avg.length;
+		return {'rating': brightness / avg.length, 'pixSpace': avg.length};
 	}
 
 	function addToData(e) {
@@ -45,7 +45,8 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 				'data': e.target.result,
 				'progress': 1,
 				'size': img.width + " x " + img.height,
-				'rating': processImage(img)
+				'rating': processImage(img).rating.toPrecision(5),
+				'specimenPixelSpace' : processImage(img).pixSpace
 			});
 
 			$scope.$apply();
@@ -68,8 +69,6 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 	$scope.createReport = function () {
 		var files = $scope.dataFiles;
 
-
-
 		if (files.length > 0) {
 			var doc = new jsPDF('p', 'in');
 			setupPageTable(doc);
@@ -81,9 +80,9 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 					setupPageTable(doc);
 				}
 
-				doc.text(1.05, 1.35 + (f%21) * ygap, files[f].name);
-				doc.text(3.18, 1.35 + (f%21) * ygap, files[f].size);
-				doc.text(5.30, 1.35 + (f%21) * ygap, files[f].rating.toPrecision(5).toString());
+				doc.text(1.05, 1.35 + (f % 21) * ygap, files[f].name);
+				doc.text(5.1, 1.35 + (f % 21) * ygap, files[f].size);
+				doc.text(6.70, 1.35 + (f % 21) * ygap, files[f].rating.toString());
 			}
 
 			doc.save('test.pdf');
@@ -94,7 +93,9 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 		// Empty square
 		doc.setLineWidth(.05);
 		doc.rect(1, .5, 6.45, 10.45);
-
+		
+		doc.text(1.05, .4, "On a scale of 0 (Completely Black) to 255 (Completely White)");
+		
 		var hgap = 2.12;
 		var ygap = .475;
 		
@@ -104,12 +105,12 @@ angular.module('di', ['ngFileUpload']).controller("diCtrl", function ($scope) {
 		}	 
 			
 		//vertical lines
-		for (var y = 1; y <= 2; y++) {
-			doc.line(y * hgap + 1, .5, y * hgap + 1, 10.95);
-		}
+        doc.line(5.00, .5, 5.00, 10.95);
+		doc.line(6.61, .5, 6.61, 10.95);
+
 
 		doc.text(1.05, .9, "Specimen");
-		doc.text(3.18, .9, "Width x Height");
-		doc.text(5.30, .9, "Rating");
+		doc.text(5.1, .9, "Width x Height");
+		doc.text(6.70, .9, "Rating");
 	}
 });

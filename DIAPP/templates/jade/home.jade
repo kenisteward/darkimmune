@@ -6,6 +6,8 @@ html(lang="en" ng-app="di")
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css')
     link(rel='stylesheet' href='stylesheets/main.css')
   body(ng-controller='diCtrl')
+        .noFiles(ng-show="dataFiles.length == 0")
+          span You currently have not processed any files.
     nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
       .container
         .navbar-header
@@ -23,7 +25,7 @@ html(lang="en" ng-app="di")
           //     a(href='#/process') Process Files
           ul.nav.navbar-nav.navbar-right
             li
-              a(ng-click="createReport()") Generate Report
+              a.genRep(ng-click="createReport()" ng-hide="dataFiles.length == 0") Generate Report
         .row(ng-hide="")
           .col-md-12
             .dad(ng-model="files" ngf-drop ngf-select ngf-drag-over-class="dragover" ngf-multiple="true" ngf-allow-dir="true" accept="image/*") Click here or drag images to upload.
@@ -42,6 +44,8 @@ html(lang="en" ng-app="di")
                       h3.panel-title {{f.name}}
                     .panel-body 
                           |Size: {{f.size}}
+                          br 
+                          |Specimen Pixels: {{ f.specimenPixelSpace }}
                           br 
                           |Rating: {{ f.rating }}
         // picture container end
