@@ -3,6 +3,8 @@ var ex = require('express');
 var path = require('path')
 var app = ex();
 
+var port = process.env.PORT || 1337;
+
 //setup using jade view engine
 app.set('views', path.join(__dirname, 'templates/jade'));
 app.set('view engine', 'jade');
@@ -18,4 +20,4 @@ app.get('/', function (req, res){
 	res.render('home', {"message": "HELLO WORLD!"});
 });
 
-app.listen(process.env.PORT || 53130 );
+app.listen(port);
